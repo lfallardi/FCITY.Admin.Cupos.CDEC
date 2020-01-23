@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="p-3">
+
+    <div class="row mb-2">
+      
+      <div class="col">
+        <h2 mat-dialog-title>Cupo base</h2>
+      </div>
+      
+      <div class="col-1 float-right">
+        <button mat-button mat-dialog-close class="btn p-0 cross-button" tabindex="-1">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+
+    </div>
+
+    <mat-divider></mat-divider>
+    
+    <mat-dialog-content class="mat-typography">
+      <form [formGroup]="updateCuposForm" class="form-cupos">
+        
+        <mat-form-field class="cupos-full-width">
+
+          <input matInput id="cuposTotales" placeholder="Cantidad de cupos"
+                 formControlName="cuposTotales"
+                 autofocus required>
+          <mat-error *ngIf="updateCuposForm.get('cuposTotales').hasError('required')" > {{errors.requiredCupos}} </mat-error>
+          
+        </mat-form-field>
+        
+        <mat-form-field class="cupos-full-width">
+          
+          <input matInput id="porcCuposDesactiva" placeholder="Porcentaje de cupos"
+                 formControlName="porcCuposDesactiva"
+                 required>
+          <mat-error *ngIf="updateCuposForm.get('porcCuposDesactiva').hasError('required')" > {{errors.requiredPorcDeshabilita}} </mat-error>
+        
+        </mat-form-field>
+      
+      </form>
+    </mat-dialog-content>
+    
+    <mat-divider></mat-divider>
+
+    <mat-dialog-actions align="end">
+      <div class="row mt-2">
+    
+        <div class="col-12">
+          <!-- <button class="btn btn-primary btn-lg mr-3" type="button" [disabled]="editCupoForm.invalid" (click)="setUpdateCupos()">Aceptar</button> -->
+          <button class="btn btn-primary btn-lg mr-3" type="button" (click)="setUpdateCupos()">Aceptar</button>
+          <button class="btn btn-outline-primary btn-lg mr-3" type="button" mat-dialog-close>Cancelar</button>
+        </div>
+    
+      </div>
+    </mat-dialog-actions>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+.full-width-table {
+  width: 100%;
+}
+
+.table-responsive-scroll {
+  overflow: auto;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.table-content {
+  padding: 0px;
+}
+
+mat-toolbar-row {
+  border-bottom: 1px solid #dedede;
+}
+
+mat-expansion-panel {
+  background: #FAFAFA;
+  box-shadow: none !important;
+  border-radius: 0px;
+}
+
+mat-expansion-panel .accordion-content {
+  padding-top: 16px;
+}
+
+.mat-row {
+  cursor: pointer;
+}
+
+.mat-row:hover {
+  background-color: #f7f7f7;
+}
+
+.mat-row:hover .mat-cell {
+  color: rgba(48, 47, 47, 0.87);
+}
+
+div:focus, input:focus, button:focus, tr:focus, td:focus {
+  outline: 0;
+}
+
+.mat-row.disabled-row {
+  background-color: #f1f1f1;
+}
+
+.mat-row.disabled-row .mat-cell {
+  color: rgba(151, 151, 151, 0.87);
+}
+
+.datepi {
+  z-index: 99999999999999999999999999999999999999999999;
+}
+.update-date{
+  padding: 10px 0px;
+  font-size: 12px;
+}
+.error-message{
+  padding: 15px 0px 0px;
+  font-size: 13px;
+}
+
+ .add-btn mat-icon {
+  padding-right:25px;
+  }
+  .add-btn label{
+    margin-bottom: 2px;
+    padding-right: 10px;
+  }
+  .filter-btn{
+    margin: 0px 15px;
+  }
+  @media (max-width:1400px){
+     .add-btn label{
+      display: none !important;
+    }
+  }

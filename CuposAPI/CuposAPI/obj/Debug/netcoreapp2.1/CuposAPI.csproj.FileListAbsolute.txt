@@ -1,0 +1,48 @@
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\appsettings.json
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.deps.json
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.runtimeconfig.json
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.runtimeconfig.dev.json
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.dll
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.pdb
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.csprojAssemblyReference.cache
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.RazorAssemblyInfo.cache
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.RazorAssemblyInfo.cs
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.AssemblyInfoInputs.cache
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.AssemblyInfo.cs
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.RazorTargetAssemblyInfo.cache
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.dll
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.pdb
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\appsettings.json
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.deps.json
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.runtimeconfig.json
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.runtimeconfig.dev.json
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.dll
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.pdb
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.csprojAssemblyReference.cache
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.RazorAssemblyInfo.cache
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.RazorAssemblyInfo.cs
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.AssemblyInfoInputs.cache
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.AssemblyInfo.cs
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.RazorTargetAssemblyInfo.cache
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.dll
+C:\FCITY\00 Proyectos\NET CORE API\00 API CUPOS\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.pdb
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\appsettings.json
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.deps.json
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.runtimeconfig.json
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.runtimeconfig.dev.json
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.dll
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\bin\Debug\netcoreapp2.1\CuposAPI.pdb
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.csprojAssemblyReference.cache
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.RazorAssemblyInfo.cache
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.RazorAssemblyInfo.cs
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.AssemblyInfoInputs.cache
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.AssemblyInfo.cs
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.RazorTargetAssemblyInfo.cache
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.dll
+C:\FCITY\00 Proyectos\Fcity.Administracion.Cupos.CDEC\CuposAPI\CuposAPI\obj\Debug\netcoreapp2.1\CuposAPI.pdb

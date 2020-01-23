@@ -1,0 +1,39 @@
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="big" color="#fff" type="ball-scale-multiple">
+    <p class="spinner">{{spinnerMessage}}</p>
+</ngx-spinner>
+
+
+<mat-toolbar>
+    <mat-toolbar-row>
+        <img src="../../../assets/images/logo-farmacity-white.svg" class="logo">
+        <span class="example-spacer"></span>
+        <mat-divider [vertical]="true"></mat-divider>
+        <a (click)="logOut()" data-toggle="tooltip" data-placement="right" title="Cerrar sesión" class="logout">
+            <mat-icon>exit_to_app</mat-icon>
+        </a>
+    </mat-toolbar-row>
+
+</mat-toolbar>
+
+<ng-sidebar-container class="full-height wrapper-container">
+
+    <ng-sidebar [(opened)]="_opened" [mode]="'push'" [dock]="true" [dockedSize]="'65px'" [sidebarClass]="'sidebar-menu'">
+        <!-- A sidebar -->
+
+        <ng-container *ngIf="_opened">
+            <app-side-nav (onToggleMenu)="_toggleSidebar()"></app-side-nav>
+        </ng-container>
+        <ng-container *ngIf="!_opened">
+            <app-side-nav-icons (onToggleMenu)="_toggleSidebar()"></app-side-nav-icons>
+        </ng-container>
+
+
+    </ng-sidebar>
+
+    <!-- Page content -->
+    <div ng-sidebar-content class="full-height">
+        <div class="container-fluid full-height">
+            <router-outlet (activate)="onActivate($event)"></router-outlet>
+        </div>
+    </div>
+</ng-sidebar-container>

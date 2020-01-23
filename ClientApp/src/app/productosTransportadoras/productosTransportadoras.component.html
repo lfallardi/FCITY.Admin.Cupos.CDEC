@@ -1,0 +1,125 @@
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="big" color="#fff" type="ball-scale-multiple">
+  <p class="spinner">Cargando...</p>
+</ngx-spinner>
+
+
+<div>
+  
+  <div class="container-fluid divContainer">
+  
+    <mat-card class="CardContainer">
+      
+      <mat-card-content>
+        
+        <form [formGroup]="filterForm">
+          
+          <!-- INICIO DE FILTROS PRINCIPALES -->
+
+          <mat-toolbar class="table-toolbar" color="default">
+          
+            <mat-toolbar-row>
+
+              <div class="row">
+
+                <div class="col-6">
+                  <mat-form-field class="form-input">
+                    <input maxlength="100" matInput id="nombreProducto" name="nombreProducto" formControlName="nombreProducto" placeholder="Nombre producto">
+                  </mat-form-field>
+                </div>
+                
+                <div class="col-6">
+                  <mat-form-field>
+
+                    <mat-select name="Prioridad" id="Prioridad" placeholder="Prioridad" formControlName="Prioridad">
+                      <mat-option *ngFor="let Prioridad of Prioridades" [value]="Prioridad.value">{{Prioridad.viewValue}}</mat-option>
+                    </mat-select>
+
+                  </mat-form-field>
+                </div>
+
+              </div>
+
+              <button mat-raised-button class="mat-raised-button search-btn"
+                      [disabled]="filterForm.invalid || mustDisableSearchButton()"
+                      (click)="loadInfoFromfilter()">
+                <mat-icon title="Buscar">search</mat-icon><label>Buscar</label>
+              </button>
+              
+              <button mat-raised-button class="mat-raised-button cleanfilter-btn"
+                      (click)="cleanFilters()">
+                <mat-icon title="Limpiar filtros">delete_sweep</mat-icon><label>Limpiar filtros</label>
+              </button>
+
+              <button mat-button class="filter-btn doubleicon" (click)="mep.expanded = !mep.expanded"> 
+                  <mat-icon class="hide-desktop"  title="Búsqueda avanzada">filter_list</mat-icon><label>Búsqueda avanzada</label><mat-icon>
+                      {{ mep.expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}
+                  </mat-icon>
+              </button>
+
+              <span class="example-spacer"></span>
+              <button mat-flat-button color="primary"
+                      (click)="openCreateCupoProducto()" class="add-btn">
+                <mat-icon title="Agregar cupo producto">add</mat-icon><label>Agregar cupo producto</label>
+              </button>
+              <!-- *ngIf="newCupoProductoEnable" -->
+
+            </mat-toolbar-row> 
+
+          </mat-toolbar>
+
+          <!-- FIN FILTROS PRINCIPALES -->
+
+          <!-- INICIO FILTROS AVANZADOS -->
+          <mat-accordion> 
+            <mat-expansion-panel [disabled]="true" #mep="matExpansionPanel">
+
+                <div class="row accordion-content">
+
+                    <div class="col-auto">
+                        <mat-form-field class="form-input">
+                            <input maxlength="100" matInput id="nombreTransportadora" name="nombreTransportadora" formControlName="nombreTransportadora" placeholder="Nombre transportadora">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-auto">
+                      
+                      <mat-form-field>
+  
+                        <mat-select name="statusCupoProducto" id="statusCupoProducto" placeholder="Estado cupo producto" formControlName="statusCupoProducto">
+                          <mat-option *ngFor="let estadoCupo of estadosCupos" [value]="estadoCupo.value">{{estadoCupo.viewValue}}</mat-option>
+                        </mat-select>
+    
+                      </mat-form-field>
+
+                    </div>
+
+                    <div class="col-auto">
+                        <mat-form-field>
+                            <input maxlength="100" matInput id="excepcion" name="excepcion"
+                                   formControlName="excepcion" placeholder="Excepción">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-auto">
+                      <mat-checkbox class="check" name="checkCuposActivo" id="checkCuposActivo" formControlName="checkCuposActivo">Cupo producto activo</mat-checkbox>
+                    </div>
+
+                </div>
+
+            </mat-expansion-panel>
+
+          </mat-accordion>
+
+          <!-- FIN FILTROS AVANZADOS-->
+
+        </form>
+
+      </mat-card-content>
+
+    </mat-card>
+
+  </div>
+
+  <p class="update-date">Última actualización: {{synchronizationDate}}</p>
+
+</div>

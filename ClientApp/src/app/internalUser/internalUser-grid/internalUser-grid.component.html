@@ -1,0 +1,93 @@
+<div class="">
+    <div>
+        <mat-card class="table-content">
+        
+            <mat-toolbar class="table-toolbar" color="default">
+                <mat-toolbar-row>
+                    <span class="example-spacer"></span>
+                    <button mat-flat-button color="primary" *ngIf="newInternalUserButtonEnabled"
+                        (click)="openCreateUserDialog()" class="add-btn"><mat-icon title="Agregar usuario">add</mat-icon><label> Agregar usuario</label></button>
+                    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button  *ngIf="deleteInternalUserButtonEnabled" mat-menu-item [disabled]="mustAbleDeleteButton()"
+                            (click)="deleteUInternalUser()">
+                            <mat-icon>visibility_off</mat-icon>
+                            <span>Eliminar</span>
+                        </button>
+                    </mat-menu>
+
+                </mat-toolbar-row>
+            </mat-toolbar>
+
+          
+            <div class="table-responsive-scroll">
+                <table mdbTable mdbTableScroll scrollX="true" maxWidth="400" mat-table [dataSource]="dataSource"
+                    class="full-width-table" matSort aria-label="Elements">
+
+                    <ng-container matColumnDef="Checkbox">
+                            <th mat-header-cell *matHeaderCellDef>
+                                <mat-checkbox (change)="$event ? masterToggle() : null"
+                                    [checked]="selection.hasValue() && isAllSelected()"
+                                    [indeterminate]="selection.hasValue() && !isAllSelected()">
+                                </mat-checkbox>
+                            </th>
+                            <td mat-cell *matCellDef="let row">
+                                <mat-checkbox (click)="$event.stopPropagation()"
+                                    (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)">
+                                </mat-checkbox>
+                            </td>
+                        </ng-container>
+
+                    <ng-container matColumnDef="Nombre">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+                        <td mat-cell *matCellDef="let row">{{row.firstName}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Apellido">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Apellido</th>
+                        <td mat-cell *matCellDef="let row">{{row.lastName}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Rol">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Rol</th>
+                        <td mat-cell *matCellDef="let row">{{row.role.description}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Email">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+                        <td mat-cell *matCellDef="let row">{{row.email}}</td>
+                    </ng-container>
+
+
+                    <ng-container matColumnDef="Fecha de creación">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha de creación</th>
+                        <td mat-cell *matCellDef="let row">{{row.registerDate}}</td>
+                    </ng-container>
+
+                    <ng-container *ngIf="editInternalUserButtonEnabled" matColumnDef="edit">
+                        <th style="text-align: center" mat-header-cell *matHeaderCellDef>Rol</th>
+                        <td style="text-align: center" mat-cell *matCellDef="let row">
+                            <button mat-icon-button color="primary" (click)="editInternalUserRole(row)" >
+                                <mat-icon class="fa fa-edit" style="font-size:23px"></mat-icon>
+                            </button>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;" 
+                        [ngClass]="{'disabled-row': row.status === 'Disabled'}"></tr>
+                </table>
+            </div>
+
+            <mat-paginator #usersPaginator [length]="length" [pageIndex]="0" [pageSize]="25"
+                [pageSizeOptions]="[25, 50, 100, 250]">
+            </mat-paginator>
+
+        </mat-card>
+        <p class="update-date">Última actualización: {{synchronizationDate}}</p>
+
+    </div>
+
+</div>

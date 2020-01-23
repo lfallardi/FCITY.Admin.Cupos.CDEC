@@ -1,0 +1,214 @@
+<div class="container">
+  <div class="p-3">
+
+    <div class="row mb-2">
+      
+      <div class="col">
+        <h2 mat-dialog-title>Alta de cupo producto</h2>
+      </div>
+      
+      <div class="col-1 float-right">
+        <button mat-button mat-dialog-close class="btn p-0 cross-button" tabindex="-1">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+
+    </div>
+
+    <mat-divider></mat-divider>
+    
+    <mat-dialog-content class="mat-typography">
+      <form [formGroup]="createCuposProductosForm" class="form-cupos-producto">
+        
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="cupos-full-width">
+              
+              <input matInput id="Producto" placeholder="Nombre producto"
+                      formControlName="nombreProducto"
+                      required>
+              <mat-error *ngIf="createCuposProductosForm.get('nombreProducto').hasError('required')" > {{errors.requiredNombreProducto}} </mat-error>
+            
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row mat-2">
+          <div class="col">
+            <mat-form-field class="cupos-full-width">
+        
+              <mat-select name="Prioridad" id="Prioridad" placeholder="Prioridad" formControlName="Prioridad" required>
+                <mat-option *ngFor="let Prioridad of Prioridades" [value]="Prioridad.value">{{Prioridad.viewValue}}</mat-option>
+              </mat-select>
+              <mat-error *ngIf="createCuposProductosForm.get('Prioridad').hasError('required')" > {{errors.requiredPriority}} </mat-error>
+            
+            </mat-form-field>
+          </div>
+
+          <div class="col">
+            <mat-form-field class="cupos-full-width">
+
+              <input matInput type="time" id="horaTope" placeholder="Hora tope" min="00:00" max="23:59"
+                      formControlName="horaTope">
+            
+            </mat-form-field>
+          </div>
+          
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="cupos-full-width">
+        
+              <mat-select name="CupoBase" id="CupoBase" placeholder="Cupo base" formControlName="CupoBase" (selectionChange)="loadCupoBase($event.value)" required>
+                <mat-option *ngFor="let cmbCupoBase of cmbCuposBases" [value]="cmbCupoBase.value">{{cmbCupoBase.viewValue}}</mat-option>
+              </mat-select>
+              <mat-error *ngIf="createCuposProductosForm.get('CupoBase').hasError('required')" > {{errors.requiredCupos}} </mat-error>
+            
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row mat-3">
+          <div class="col">
+            <mat-form-field class="cupos-full-width">
+              
+              <input matInput id="CantCupos" placeholder="Cantidad cupos"
+                      formControlName="cantCupos"
+                      disabled>
+            
+            </mat-form-field>
+          </div>
+
+          <div class="col">
+            <mat-form-field class="cupos-full-width">
+              
+              <input matInput id="PorcDeshabilita" placeholder="Porcentaje deshabilita"
+                      formControlName="porcDeshabilita"
+                      disabled>
+            
+            </mat-form-field>
+          </div>
+          
+          <div class="col">
+            <mat-form-field class="cupos-full-width">
+              
+              <input matInput id="CupoMinimo" placeholder="Porcentaje cupo minimo"
+                      formControlName="cupoMinimo"
+                      disabled>
+            
+            </mat-form-field>
+          </div>
+
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="row mat-3">
+          <div class="col">
+            <mat-checkbox class="check check-transportadora" name="checkActivo" id="checkActivo" formControlName="checkActivo">Activo</mat-checkbox>
+          </div>
+          <div class="col">
+            <mat-checkbox class="check check-transportadora" name="checkDom" id="checkDom" formControlName="checkDom">Domicilio 2.0</mat-checkbox>
+
+          </div>
+          <div class="col">
+            <mat-checkbox class="check check-transportadora" name="checkExcepcion" id="checkExcepcion" formControlName="checkExcepcion" (change)="mep.expanded = !mep.expanded">Excepción</mat-checkbox>
+          </div>
+        </div>
+
+        <mat-accordion class="excepcion"> 
+          <mat-expansion-panel class="" [disabled]="true" #mep="matExpansionPanel">
+            
+            <div class="row accordion-content">
+              
+              <div class="col">
+                <div class="row">
+                  <mat-form-field class="cupos-full-width">
+                    <input matInput id="Excepcion" placeholder="Nombre excepción"
+                            formControlName="Excepcion">
+                    <mat-error *ngIf="mep.expanded && createCuposProductosForm.get('Excepcion').hasError('required')" > {{errors.requiredNombreExcepcion}} </mat-error>
+                  
+                  </mat-form-field>
+                </div>
+              
+                <div class="row mat-3">
+                  <div class="col">
+                    <mat-form-field>
+                      <input matInput type="date" placeholder="Fecha inicio"
+                              id="fechaInicio" name="fechaInicio" formControlName="fechaInicio">
+                    </mat-form-field>
+                  </div>
+
+                  <div class="col">
+                    <mat-form-field>
+                      <input matInput type="date" placeholder="Fecha fin"
+                              id="fechaFin" name="fechaFin" formControlName="fechaFin">
+                    </mat-form-field>
+                  </div>
+
+                  <div class="col">
+                    <mat-form-field>
+                      <input matInput type="time" id="horaTopeExcepcion" placeholder="Hora tope" min="00:00" max="23:59"
+                              formControlName="horaTopeExcepcion">
+                    </mat-form-field>
+                  </div>
+                  
+                </div>
+
+                <div class="row mat-4">
+
+                  <div class="col">
+                    <mat-form-field>
+                      <input matInput type="number" id="cuposTotalesExcepcion" placeholder="Cupos totales" min="0"
+                              formControlName="cuposTotalesExcepcion">
+                    </mat-form-field>
+                  </div>
+
+                  <div class="col">
+                    <mat-form-field>
+                      <input matInput type="number" id="porcDeshabilitaExcepcion" placeholder="Porcentaje deshabilita" min="0"
+                              formControlName="porcDeshabilitaExcepcion">
+                    </mat-form-field>
+                  </div>
+
+                  <div class="col">
+                    <mat-form-field>
+                      <input matInput type="number" id="cuposMinimosExcepcion" placeholder="Cupos minimos" min="0"
+                              formControlName="cuposMinimosExcepcion">
+                    </mat-form-field>
+                  </div>
+
+                  <div class="col">
+                    <mat-checkbox class="check check-transportadora" name="checkActivoExcepcion" id="checkActivoExcepcion" formControlName="checkActivoExcepcion">Activo</mat-checkbox>
+                  </div>
+
+                </div>
+
+              </div>
+            
+            </div>
+
+          </mat-expansion-panel>
+        </mat-accordion>
+
+      </form>
+
+    </mat-dialog-content>
+    
+    <mat-divider></mat-divider>
+
+    <!-- CONFIRMACION DE DATOS -->
+    <mat-dialog-actions align="end">
+      <div class="row mt-2">
+    
+        <div class="col-12">
+          <!-- <button class="btn btn-primary btn-lg mr-3" type="button" [disabled]="editCupoForm.invalid" (click)="setUpdateCupos()">Aceptar</button> -->
+          <button class="btn btn-primary btn-lg mr-3" type="button" (click)="createNewCupoProducto()">Aceptar</button>
+          <button class="btn btn-outline-primary btn-lg mr-3" type="button" mat-dialog-close>Cancelar</button>
+        </div>
+    
+      </div>
+    </mat-dialog-actions>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+table {
+    width: 100%;
+    box-shadow: none;
+}
+  
+.divContainer {
+  padding: 0px;
+}
+
+.CardContainer {
+    height: 100%;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: '#fafafa';
+    color: black;
+    padding: 0px 10px 10px 10px;
+}
+
+.ContainerCupos {
+    padding-bottom: 10%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.ToolbarTitle {
+    background-color: white;
+    font-size: 14px;
+    font-weight: 400;
+    border-bottom: lightgray 1px solid;
+    padding: 0px;
+}
+
+.CardContentAlert {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.CardFooter {
+    margin-bottom: 5% !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.CardFooterSpan {
+    font-size: 12px;
+    color: gray;
+}
+
+.mat-button-edit {
+    float: right;
+}
+
+.mat-row:hover {
+    background-color: #f7f7f7;
+  }
+  
+.mat-row:hover .mat-cell {
+    color: rgba(48, 47, 47, 0.87);
+  }
+
+/* PRUEBA DE INPUT */
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  

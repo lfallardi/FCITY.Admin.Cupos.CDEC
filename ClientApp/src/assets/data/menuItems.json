@@ -1,0 +1,78 @@
+{
+    "menuItems": [
+        {
+            "routePath": "/cupos",
+            "description": "cupos",
+            "disabled": false,
+            "show": false,
+            "icon":"calendar_view_day",
+            "subItems": []
+        },
+        {
+            "routePath": "/productos",
+            "description": "Cupos productos",
+            "disabled": false,
+            "show": false,
+            "icon": "group_work",
+            "subItems": []
+        },
+        {
+            "routePath": "/transportadoras",
+            "description":"Transportadoras",
+            "disabled": false,
+            "show": false,
+            "icon": "details",
+            "subItems": []
+
+        },
+        {
+            "routePath": "/consultas",
+            "description": "Consultas",
+            "disabled": false,
+            "show": false,
+            "icon":"search",
+            "subItems": [
+                {
+                    "routePath": "",
+                    "description": "Cupos tomados",
+                    "disabled": false,
+                    "show": false,
+                    "icon": "storage",
+                    "subItems": []
+                },
+                {
+                    "routePath": "",
+                    "description": "Cupo día detalle",
+                    "disabled": false,
+                    "show": false,
+                    "icon": "details",
+                    "subItems": []
+                },
+                {
+                    "routePath": "",
+                    "description": "Detalle log",
+                    "disabled": false,
+                    "show": false,
+                    "icon": "insert_comment",
+                    "subItems": []
+                }
+            ]
+        },
+        {
+            "routePath": "/internalUser",
+            "description": "Usuarios",
+            "disabled": false,
+            "show": false,
+            "icon":"person",
+            "subItems": []
+        },
+        {
+            "routePath": "/suppliers",
+            "description": "Configuración",
+            "disabled": false,
+            "show": false,
+            "icon": "settings",
+            "subItems": []
+        }
+    ]
+}

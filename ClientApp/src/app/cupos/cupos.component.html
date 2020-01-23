@@ -1,0 +1,69 @@
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="big" color="#fff" type="ball-scale-multiple">
+  <p class="spinner">Cargando...</p>
+</ngx-spinner>
+
+<div class="container-fluid divContainer">
+  
+  <div class="container ContainerCupos" >
+
+    <mat-card class="CardContainer">
+      
+      <mat-toolbar class="ToolbarTitle">Administración de cupos</mat-toolbar>
+
+      <mat-card-content>
+        
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+          <ng-container matColumnDef="idECCupoBase">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th>
+            <td mat-cell *matCellDef="let row"> {{row.idECCupoBase}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="dia">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Día</th>
+            <td mat-cell *matCellDef="let row"> 
+              <div [ngSwitch]="row.dia">
+                <p *ngSwitchCase=1> Lunes </p>
+                <p *ngSwitchCase=2> Martes </p>
+                <p *ngSwitchCase=3> Miércoles </p>
+                <p *ngSwitchCase=4> Jueves </p>
+                <p *ngSwitchCase=5> Viernes </p>
+                <p *ngSwitchCase=6> Sábado </p>
+                <p *ngSwitchCase=7> Domingo </p>
+              </div>
+            </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="cuposTotales">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="DataTableHeaderNumber">Cupos</th>
+            <td mat-cell *matCellDef="let row" class="DataTableNumber"> {{row.cuposTotales}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="porcCuposDesactiva">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>% Deshabilitado</th>
+            <td mat-cell *matCellDef="let row" class="DataTableNumber"> {{row.porcCuposDesactiva}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="edition">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+            <td mat-cell *matCellDef="let row"> 
+              <button mat-icon-button class="mat-button-edit" color="primary" (click)="editCupoBase(row)" >
+                <mat-icon class="fa fa-edit" style="font-size:23px"></mat-icon>
+              </button>
+            </td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+      </mat-card-content>
+
+    </mat-card>
+    
+    <p class="update-date">Última actualización: {{synchronizationDate}}</p>
+  
+  </div>
+
+</div>
+
